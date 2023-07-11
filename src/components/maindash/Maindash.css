@@ -1,0 +1,41 @@
+.maindash {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.top {
+    display: flex;
+}
+
+.cards {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.parent-container {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+}
+
+@media screen and (max-width: 1200px) {
+    .top {
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1201px) {
+    .top {
+        gap: 1rem;
+    }
+}

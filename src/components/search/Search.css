@@ -1,0 +1,18 @@
+.cancel-search-btn-full {
+    display: flex;
+    justify-content: end;
+    text-decoration: none;
+    cursor: pointer;
+    align-items: center;
+    margin: 0.4rem;
+    color: black;
+}
+
+
+@media screen and (min-width: 768px) {
+    .cancel-search-btn-full {
+        display: none;
+        visibility: hidden;
+    }
+
+}

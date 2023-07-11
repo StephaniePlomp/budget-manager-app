@@ -1,0 +1,236 @@
+.delete-transaction-btn {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.MuiTableRow-root.MuiTableRow-head>* {
+    font-weight: bold !important;
+}
+
+.amount-min {
+    color: #e66060;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.amount-plus {
+    color: #31af2d;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.currency {
+    margin-right: 5px;
+}
+
+/* TABLE */
+
+.table-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 0.7rem;
+    position: relative;
+    padding-bottom: 1rem;
+    overflow: hidden;
+    border: 2px solid var(--purple);
+    background: #ffffff62;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-height: 250px;
+    table-layout: fixed;
+}
+
+th {
+    padding: 8px 4px;
+    text-align: left;
+    background-color: var(--purple);
+    color: white;
+    margin: 0 auto;
+}
+
+th:first-child {
+    width: 110px;
+}
+
+th:nth-child(2) {
+    width: 120px;
+    overflow: hidden;
+}
+
+th:nth-child(3) {
+    width: 100px;
+}
+
+th:nth-child(4) {
+    width: 70px;
+}
+
+th:nth-child(5) {
+    width: 40px;
+    cursor: pointer;
+}
+
+th:nth-child(5) .search-button:hover {
+    scale: calc(1.5);
+    transition: 0.5s;
+}
+
+td {
+    line-height: 23px;
+    padding: 4px 3px;
+    color: black;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.added {
+    background-color: transparent;
+    animation-name: addingItem;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+}
+
+@keyframes addingItem {
+    0% {
+        background-color: var(--purple);
+        font-size: 0.95rem;
+    }
+
+    10% {
+        background-color: var(--purple)
+    }
+
+    70% {
+        background-color: transparent
+    }
+}
+
+tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.812);
+    cursor: pointer;
+}
+
+.no-transactions {
+    pointer-events: none !important;
+    text-align: center;
+}
+
+tbody td {
+    position: relative;
+}
+
+tbody td:hover:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -9999px;
+    bottom: -9999px;
+    background-color: rgba(181, 49, 49, 0.2);
+    z-index: -1;
+}
+
+.pagination {
+    margin: 1rem auto 0 auto;
+    flex-wrap: nowrap;
+}
+
+/* searchbar */
+
+.search-button {
+    margin: 0 auto;
+    transform: scaleX(-1);
+    display: flex;
+}
+
+.search-component {
+    display: flex;
+    width: 75%;
+    max-width: 400px;
+    margin-bottom: 1rem;
+}
+
+.search-div {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.searchbar {
+    padding: 0.5rem;
+    border-radius: 0.7rem;
+    border: 2px black solid;
+    width: 60%;
+}
+
+.cancel-search-btn-expanded {
+    text-decoration: none;
+    cursor: pointer;
+    align-items: center;
+    margin: 0.4rem;
+    color: black;
+}
+
+
+@media screen and (max-width: 650px) {
+    .delete-transaction-btn {
+        width: 20px;
+    }
+
+    td {
+        padding: 5px;
+    }
+
+    .added {
+        background-color: transparent;
+        animation-name: addingItem;
+        animation-duration: 4s;
+        animation-iteration-count: 1;
+    }
+
+    @keyframes addingItem {
+        0% {
+            background-color: var(--purple);
+            font-size: 0.95rem;
+        }
+
+        10% {
+            background-color: var(--purple)
+        }
+
+        70% {
+            background-color: transparent
+        }
+    }
+
+    table {
+        font-size: 0.85rem;
+    }
+
+    .td-mobile span {
+        display: block;
+    }
+
+    th:first-child {
+        width: 105px;
+    }
+
+    th:nth-child(2) {
+        width: 85px;
+        overflow: hidden;
+    }
+
+    th:nth-child(3) {
+        width: 80px;
+    }
+
+    th:nth-child(4) {
+        width: 65px;
+    }
+}

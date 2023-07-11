@@ -1,0 +1,119 @@
+
+  .expense-card {
+    display: flex;
+    height: 15rem !important;
+    border-radius: 0.7rem;
+    color: var(--text);
+    padding: 1rem;
+    position: relative;
+    background-color: var(--backgrnd-comp);
+    border: 2px solid var(--purple);
+    margin-bottom: 1rem;
+  }
+
+  .Income-card {
+    display: flex;
+    height: 15rem !important;
+    border-radius: 0.7rem;
+    color: var(--text);
+    padding: 1rem;
+    position: relative;
+    background-color: var(--backgrnd-comp);
+    justify-content: space-between;
+    border: 2px solid var(--purple);
+  }
+
+  .full {
+    flex: 1 1;
+  }
+
+  .flex-grow {
+    flex-grow: 1;
+  }
+
+  .card-content {
+    display: flex;
+    width: 100%;
+  }
+
+  .expanding-card {
+    display: flex;
+    flex-shrink: 0;
+    cursor: pointer;
+    min-width: 4rem;
+  }
+  
+  .expanding-title {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-size: 1.3rem;
+  }
+  
+  .centered-element {
+    top: 0; bottom: 0; left: 0; right: 0;
+    margin: auto;
+    height: 7,5rem;
+  }
+
+  .centered-element.expense {
+    margin: auto 0;
+  }
+
+  /* sideDetail*/
+.detail {
+    flex: 1 1;
+    margin: 0.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  
+  .detail>span:nth-child(2) {
+    font-size: 22px;
+    font-weight: bold;
+  }
+  
+  .detail>span:nth-child(3) {
+    font-size: 14px;
+  }
+
+  .expanded-card {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+  width: 206%;
+  right: 0;
+  top: 0;
+  z-index: 9;
+  border-radius: 1rem;
+  padding: 1rem;
+  background: linear-gradient(180deg, #bb67ff 0%, #c484f3 100%);
+}
+
+.custom-tooltip {
+  background-color: white;
+  color: rgb(44, 43, 43);
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  border: rgb(44, 43, 43) 1px solid;
+}
+
+@media screen and (max-width: 480px) {
+  .detail {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .card-content {
+    flex-direction: column;
+    align-items: center;
+    padding: 0.4rem;
+  }
+
+  .income-card, .expense-card {
+    padding: 0.4rem;
+  }
+}

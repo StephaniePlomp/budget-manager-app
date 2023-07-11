@@ -1,0 +1,57 @@
+.income-container {
+  width: 95%;
+  border-radius: 0.7rem;
+  margin: 1rem auto;
+  border-bottom: 2px solid var(--purple);
+  border-right: 2px solid var(--purple);
+  border-left: 2px solid var(--purple);
+  max-width: 600px;
+  background-color: var(--backgrnd-comp);
+  height: fit-content;
+  }
+  
+  .income-top {
+    display: flex;
+    padding-bottom: 0.5rem;
+    justify-content: space-between;
+    border-bottom: 3px solid var(--purple);
+    background-color: var(--purple);
+    border-radius: 0.7rem 0.7rem 0 0;
+  }
+  
+  .income-button,
+  .income-button label {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    padding: 0 10px;
+  }
+  
+  .btn-back,
+  .btn-cancel {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+  
+  .income-card {
+    border-radius: 0.7rem;
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    border-radius: 0.7rem;
+    color: black;
+    padding: 1rem 0;
+    position: relative;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  
+  .income-title {
+    display: flex;
+    font-weight: bold;
+    font-size: 22px;
+    margin: 1rem auto;
+  }
+  

@@ -1,0 +1,37 @@
+.budget-container {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.7rem;
+    color: var(--text);
+    position: relative;
+    background-color: var(--backgrnd-comp);
+    min-width: 15rem;
+    border-bottom: 2px solid var(--purple);
+    border-right: 2px solid var(--purple);
+    border-left: 2px solid var(--purple);
+    margin-bottom: 1rem;
+}
+
+.budget-title {
+    display: flex;
+    font-weight: bold;
+    font-size: 22px;
+    justify-content: center;
+    background-color: var(--purple);
+    padding: 0.7rem;
+    color: white;
+    border-radius: 0.7rem 0.7rem 0 0;
+}
+
+.budget-total {
+    padding: 1rem;
+    font-weight: bold;
+    font-size: 22px;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 1201px) {
+    .budget-total {
+        margin-top: 1rem;
+    }
+}
