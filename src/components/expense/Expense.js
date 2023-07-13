@@ -10,7 +10,6 @@ import InputAdornment from '@mui/material/InputAdornment';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import { MenuItem } from '@mui/material';
-import { makeStyles } from "@material-ui/core/styles";
 import Typography from '@mui/material/Typography';
 
 const Expense = ({ setIsAdded }) => {
@@ -89,20 +88,19 @@ const Expense = ({ setIsAdded }) => {
         }
     }
 
-    const useStyles = makeStyles({
-        root: {
-            "& label.Mui-focused": {
-                color: "black"
-            },
-            "& .MuiOutlinedInput-root": {
-                "&.Mui-focused fieldset": {
-                    borderColor: "var(--purple)"
-                },
-            },
-        }
-    });
+    // const useStyles = createTheme({
+    //     root: {
+    //         "& label.Mui-focused": {
+    //             color: "black"
+    //         },
+    //         "& .MuiOutlinedInput-root": {
+    //             "&.Mui-focused fieldset": {
+    //                 borderColor: "var(--purple)"
+    //             },
+    //         },
+    //     }
+    // });
 
-    const classes = useStyles();
 
     return (
         <div className='transaction-container'>
@@ -134,7 +132,7 @@ const Expense = ({ setIsAdded }) => {
                     onSubmit={onSaveExpenseClick}
                 >
                     <TextField
-                        className={classes.root}
+                        className='textfield'
                         variant="outlined"
                         label="Name of Expense"
                         value={title}
@@ -145,12 +143,7 @@ const Expense = ({ setIsAdded }) => {
                         helperText={titleError && "Please fill in the name"}
                     />
                     <TextField
-                        sx={{
-                            "&.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline": {
-                                borderColor: "var(--purple)"
-                            }
-                        }}
-                        className={classes.root}
+                        className='textfield'
                         value={amount}
                         id="filled-adornment-amount"
                         inputProps={{ maxLength: 6 }}
@@ -164,7 +157,7 @@ const Expense = ({ setIsAdded }) => {
                     />
 
                     <TextField
-                        className={classes.root}
+                        className='textfield'
                         type='date'
                         value={date}
                         onChange={onDateChange}
@@ -174,8 +167,7 @@ const Expense = ({ setIsAdded }) => {
                     />
 
                     <TextField
-                        className={classes.root}
-                        // labelid="demo-simple-select-label"
+                        className='textfield'
                         id="demo-simple-select"
                         value={category}
                         label="Select Category"

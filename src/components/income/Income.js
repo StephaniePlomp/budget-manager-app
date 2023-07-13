@@ -7,7 +7,6 @@ import { addIncome, changePeriod } from '../../features/transaction/transactionS
 import moment from 'moment/moment';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
-import { makeStyles } from "@material-ui/core/styles";
 import InputAdornment from '@mui/material/InputAdornment';
 import Typography from '@mui/material/Typography';
 
@@ -67,21 +66,6 @@ const Income = ({ isAdded, setIsAdded }) => {
         }
     }
 
-    const useStyles = makeStyles({
-        root: {
-            "& label.Mui-focused": {
-                color: "black"
-            },
-            "& .MuiOutlinedInput-root": {
-                "&.Mui-focused fieldset": {
-                    borderColor: "var(--purple)"
-                },
-            },
-        }
-    });
-
-    const classes = useStyles();
-
     return (
         <div className='income-container'>
             <div className='income-top'>
@@ -113,7 +97,7 @@ const Income = ({ isAdded, setIsAdded }) => {
                     onSubmit={onSaveIncomeClick}
                 >
                     <TextField
-                        className={classes.root}
+                        className='textfield'
                         variant="outlined"
                         label="Name of Income"
                         value={title}
@@ -129,7 +113,7 @@ const Income = ({ isAdded, setIsAdded }) => {
                                 borderColor: "var(--purple)"
                             }
                         }}
-                        className={classes.root}
+                        className='textfield'
                         value={amount}
                         id="filled-adornment-amount"
                         inputProps={{ maxLength: 6 }}
@@ -142,7 +126,7 @@ const Income = ({ isAdded, setIsAdded }) => {
                         helperText={amountError && "Please fill in the amount"}
                     />
                     <TextField
-                        className={classes.root}
+                        className='textfield'
                         type='date'
                         value={date}
                         onChange={onDateChange}

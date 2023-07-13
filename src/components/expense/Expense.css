@@ -75,4 +75,10 @@
   margin: 0 15px 0 5px;
 }
 
+.textfield .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: var(--purple);
+}
 
+.textfield .MuiInputLabel-outlined.Mui-focused {
+  color: var(--purple);
+}
