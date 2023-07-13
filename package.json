@@ -23,9 +23,8 @@
     "recharts": "^2.5.0",
     "redux": "^4.2.0"
   },
-
   "devDependencies": { 
-    "react-scripts": "5.0.1" 
+    "react-scripts": "5.0.1"
   },
 
   "scripts": {
