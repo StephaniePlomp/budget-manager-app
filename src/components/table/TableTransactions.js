@@ -228,7 +228,6 @@ handleAddingItem()
     }, 3000)
     return () => {
       clearTimeout(timeAdded)
-      console.log(isAdded)
     }
   }, [setItemAnimation, setIsAdded, isAdded])
 

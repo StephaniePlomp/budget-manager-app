@@ -26,7 +26,7 @@ const Sidebar = ({ show, dataExpense, dataIncome, setPage }) => {
     dispatch(addDemoIncome(dataIncome));
     setPage(1)
     setExpanded(false)
-    navigate("/")
+    navigate("/budget-manager-app")
   }
 
   const [demoAlert, setDemoAlert] = useState(<button onClick={handleDemo} className="demo-btn alert">Demo</button>)
@@ -60,7 +60,7 @@ const Sidebar = ({ show, dataExpense, dataIncome, setPage }) => {
   const handleReset = () => {
     dispatch(resetTransactions())
     setExpanded(false)
-    navigate("/")
+    navigate("/budget-manager-app")
   }
 
   return (
@@ -76,7 +76,7 @@ const Sidebar = ({ show, dataExpense, dataIncome, setPage }) => {
 
         <div className="menu">
           <ul className="menu-items" onClick={handleClick}>
-            <li><NavLink to='/' className="menu-item"> <UilEstate /> Dashboard</NavLink></li>
+            <li><NavLink to='/budget-manager-app' className="menu-item"> <UilEstate /> Dashboard</NavLink></li>
             <li><NavLink to='/add-income' className="menu-item"> <UilPlusCircle /> Add Income</NavLink></li>
             <li><NavLink to='/add-expense' className="menu-item"><UilMinusCircle /> Add Expense</NavLink></li>
           </ul>

@@ -82,7 +82,7 @@ const Expense = ({ setIsAdded }) => {
             setAmount('')
             setDate('')
             setCategory('')
-            navigate("/")
+            navigate("/budget-manager-app")
             dispatch(changePeriod(0))
             setIsAdded(true)
         }
@@ -105,13 +105,13 @@ const Expense = ({ setIsAdded }) => {
     return (
         <div className='transaction-container'>
             <div className='transaction-top'>
-                <Link to='/' className='transaction-button'>
+                <Link to='/budget-manager-app' className='transaction-button'>
                     <div className='btn-back'>
                         <UilAngleLeftB />
                         <label>Back</label>
                     </div>
                 </Link>
-                <Link to='/' className='transaction-button'>
+                <Link to='/budget-manager-app' className='transaction-button'>
                     <div className='btn-cancel'>
                         <UilTimes />
                         <label>Cancel transaction</label>

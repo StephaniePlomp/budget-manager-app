@@ -60,7 +60,7 @@ const Income = ({ isAdded, setIsAdded }) => {
             setTitle('')
             setAmount('')
             setDate('')
-            navigate("/")
+            navigate("/budget-manager-app")
             setIsAdded(true)
             dispatch(changePeriod(0))
         }
@@ -69,13 +69,13 @@ const Income = ({ isAdded, setIsAdded }) => {
     return (
         <div className='income-container'>
             <div className='income-top'>
-                <Link to='/' className='income-button'>
+                <Link to='/budget-manager-app' className='income-button'>
                     <div className='btn-back'>
                         <UilAngleLeftB />
                         <label>Back</label>
                     </div>
                 </Link>
-                <Link to='/' className='income-button'>
+                <Link to='/budget-manager-app' className='income-button'>
                     <div className='btn-cancel'>
                         <UilTimes />
                         <label>Cancel transaction</label>
