@@ -60,7 +60,7 @@ const Income = ({ isAdded, setIsAdded }) => {
             setTitle('')
             setAmount('')
             setDate('')
-            navigate("/budget-manager-app")
+            navigate("/")
             setIsAdded(true)
             dispatch(changePeriod(0))
         }

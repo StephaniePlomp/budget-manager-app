@@ -82,7 +82,7 @@ const Expense = ({ setIsAdded }) => {
             setAmount('')
             setDate('')
             setCategory('')
-            navigate("/budget-manager-app")
+            navigate("/")
             dispatch(changePeriod(0))
             setIsAdded(true)
         }

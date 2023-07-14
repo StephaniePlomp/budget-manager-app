@@ -192,7 +192,6 @@ function App() {
   }, [])
 
   return (
-    <Router>
       <div className="app">
         <AnimatePresence>
           {show &&
@@ -211,14 +210,13 @@ function App() {
           <div className="app-glass">
             <Sidebar page={page} setPage={setPage} dataIncome={dataIncome} dataExpense={dataExpense} show={show} setSearchActive={setSearchActive} searchActive={searchActive} query={query} setQuery={setQuery} />
             <Routes>
-              <Route path='/budget-manager-app' exact element={<MainDash page={page} setPage={setPage} setSearchActive={setSearchActive} searchActive={searchActive} query={query} setQuery={setQuery} isAdded={isAdded} setIsAdded={setIsAdded} />} />
+              <Route path='/' exact element={<MainDash page={page} setPage={setPage} setSearchActive={setSearchActive} searchActive={searchActive} query={query} setQuery={setQuery} isAdded={isAdded} setIsAdded={setIsAdded} />} />
               <Route path='/add-income' exact element={<Income isAdded={isAdded} setIsAdded={setIsAdded} />} />
               <Route path='/add-expense' exact element={<Expense isAdded={isAdded} setIsAdded={setIsAdded} />} />
             </Routes>
           </div>
         </AnimatePresence>
       </div>
-    </Router>
   );
 }
 
