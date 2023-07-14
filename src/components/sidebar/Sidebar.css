@@ -150,7 +150,13 @@
 @media screen and (max-width: 768px) {
 
   .logo {
-    font-size: 20px;
+    font-size: 18px;
+    display: flex;
+  }
+
+  .logo>img {
+    width: 2.5rem;
+    height: 2.5rem;
   }
 
   .sidebar.open {
@@ -199,12 +205,15 @@
     display: block;
   }
 
-  .logo {
-    display: flex;
-  }
-
   .menu .menuItem:last-child {
     position: relative;
     margin-top: 6rem;
   }
+  
+    .control-panel {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 3rem;
+        }
 }

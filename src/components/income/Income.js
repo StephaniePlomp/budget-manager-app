@@ -1,6 +1,6 @@
 import './Income.css';
 import React, { useState } from 'react';
-import { UilAngleLeftB, UilTimes } from '@iconscout/react-unicons';
+import { UilTimes } from '@iconscout/react-unicons';
 import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { addIncome, changePeriod } from '../../features/transaction/transactionSlice';
@@ -69,13 +69,7 @@ const Income = ({ isAdded, setIsAdded }) => {
     return (
         <div className='income-container'>
             <div className='income-top'>
-                <Link to='/budget-manager-app' className='income-button'>
-                    <div className='btn-back'>
-                        <UilAngleLeftB />
-                        <label>Back</label>
-                    </div>
-                </Link>
-                <Link to='/budget-manager-app' className='income-button'>
+                <Link to='/' className='income-button'>
                     <div className='btn-cancel'>
                         <UilTimes />
                         <label>Cancel transaction</label>

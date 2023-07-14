@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Expense.css';
-import { UilAngleLeftB, UilTimes } from '@iconscout/react-unicons';
+import { UilTimes } from '@iconscout/react-unicons';
 import { Link, useNavigate } from 'react-router-dom';
 import { categoryOptions } from "../../data/Data";
 import { useDispatch } from 'react-redux';
@@ -105,13 +105,7 @@ const Expense = ({ setIsAdded }) => {
     return (
         <div className='transaction-container'>
             <div className='transaction-top'>
-                <Link to='/budget-manager-app' className='transaction-button'>
-                    <div className='btn-back'>
-                        <UilAngleLeftB />
-                        <label>Back</label>
-                    </div>
-                </Link>
-                <Link to='/budget-manager-app' className='transaction-button'>
+                <Link to='/' className='transaction-button'>
                     <div className='btn-cancel'>
                         <UilTimes />
                         <label>Cancel transaction</label>

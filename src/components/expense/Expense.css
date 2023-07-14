@@ -12,8 +12,8 @@
 
 .transaction-top {
   display: flex;
+  justify-content: flex-end;
   padding-bottom: 0.5rem;
-  justify-content: space-between;
   border-bottom: 3px solid var(--purple);
   background-color: var(--purple);
   border-radius: 0.7rem 0.7rem 0 0;
@@ -27,7 +27,6 @@
   padding: 0 10px;
 }
 
-.btn-back,
 .btn-cancel {
   display: flex;
   align-items: center;
