@@ -106,26 +106,29 @@ const TableTransactions = ({ page, setPage, setIsAdded, isAdded }) => {
   const handleTransactions = useCallback(() => {
     if (periodIndex === 0) {
       const filterTransactions = transactions.filter((transaction) =>
-        search.toLocaleLowerCase() === '' ? transaction : transaction.title.toLocaleLowerCase().includes(search))
+        search.toLocaleLowerCase() === '' ? transaction : transaction.title.toLocaleLowerCase().includes(search.toLocaleLowerCase()))
       const sortTransactions = filterTransactions.sort((a, b) => new Date(b.date.replace(/-/g, "/")) - new Date(a.date.replace(/-/g, "/")))
+      console.log(search)
       return sortTransactions;
     } else if (periodIndex === 1) {
       const filterTodaysTransactions = todaysTransactions.filter((transaction) =>
-        search.toLocaleLowerCase() === '' ? transaction : transaction.title.toLocaleLowerCase().includes(search))
+        search.toLocaleLowerCase() === '' ? transaction : transaction.title.toLocaleLowerCase().includes(search.toLocaleLowerCase()))
         const sortTodaysTransactions = filterTodaysTransactions.sort((a, b) => new Date(b.date.replace(/-/g, "/")) - new Date(a.date.replace(/-/g, "/")))
       return sortTodaysTransactions;
     } else if (periodIndex === 2) {
       const filterWeekTransactions = weekTransactions.filter((transaction) =>
-        search.toLocaleLowerCase() === '' ? transaction : transaction.title.toLocaleLowerCase().includes(search))
+        search.toLocaleLowerCase() === '' ? transaction : transaction.title.toLocaleLowerCase().includes(search.toLocaleLowerCase()))
         const sortWeekTransactions = filterWeekTransactions.sort((a, b) => new Date(b.date.replace(/-/g, "/")) - new Date(a.date.replace(/-/g, "/")))
       return sortWeekTransactions;
     } else if (periodIndex === 3) {
       const filterMonthTransactions = monthTransactions.filter((transaction) =>
-        search.toLocaleLowerCase() === '' ? transaction : transaction.title.toLocaleLowerCase().includes(search))
+        search.toLocaleLowerCase() === '' ? transaction : transaction.title.toLocaleLowerCase().includes(search.toLocaleLowerCase()))
         const sortMonthTransactions = filterMonthTransactions.sort((a, b) => new Date(b.date.replace(/-/g, "/")) - new Date(a.date.replace(/-/g, "/")))
       return sortMonthTransactions;
     }
   }, [search, periodIndex, transactions, todaysTransactions, weekTransactions, monthTransactions])
+
+
 
   useEffect(() => {
     setTransactionPeriod(handleTransactions())

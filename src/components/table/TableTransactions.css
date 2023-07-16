@@ -151,8 +151,6 @@ tbody td:hover:before {
 
 .search-component {
     display: flex;
-    width: 75%;
-    max-width: 400px;
     margin-bottom: 1rem;
 }
 
@@ -166,7 +164,13 @@ tbody td:hover:before {
     padding: 0.5rem;
     border-radius: 0.7rem;
     border: 2px black solid;
-    width: 60%;
+    width: 50%;
+}
+
+input:focus {
+    border: 2px solid var(--purple);
+    outline: none !important;
+    box-shadow: 0 0 5px var(--purple);
 }
 
 .cancel-search-btn-expanded {
@@ -232,5 +236,9 @@ tbody td:hover:before {
 
     th:nth-child(4) {
         width: 65px;
+    }
+
+    .searchbar {
+        width: 100%;
     }
 }
