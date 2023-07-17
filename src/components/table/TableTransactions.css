@@ -241,4 +241,11 @@ input:focus {
     .searchbar {
         width: 100%;
     }
+
+    @media screen and (max-width: 480px) {
+        th:nth-child(4) {
+            width: 100%;
+            cursor: pointer;
+        }
+    }
 }
