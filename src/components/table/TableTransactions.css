@@ -250,5 +250,10 @@ input:focus {
             width: 100%;
             cursor: pointer;
         }
+
+        .table-container {
+            min-height: 392px;
+            height: fit-content;
+        }
     }
 }
