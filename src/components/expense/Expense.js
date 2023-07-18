@@ -88,20 +88,6 @@ const Expense = ({ setIsAdded }) => {
         }
     }
 
-    // const useStyles = createTheme({
-    //     root: {
-    //         "& label.Mui-focused": {
-    //             color: "black"
-    //         },
-    //         "& .MuiOutlinedInput-root": {
-    //             "&.Mui-focused fieldset": {
-    //                 borderColor: "var(--purple)"
-    //             },
-    //         },
-    //     }
-    // });
-
-
     return (
         <div className='transaction-container'>
             <div className='transaction-top'>

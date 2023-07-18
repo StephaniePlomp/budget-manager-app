@@ -170,7 +170,7 @@ tbody td:hover:before {
     width: 50%;
 }
 
-input:focus {
+.searchbar:focus {
     border: 2px solid var(--purple);
     outline: none !important;
     box-shadow: 0 0 5px var(--purple);
@@ -249,6 +249,7 @@ input:focus {
         th:nth-child(4) {
             width: 100%;
             cursor: pointer;
+            text-align: center;
         }
 
         .table-container {
