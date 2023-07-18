@@ -92,9 +92,11 @@ const TableTransactions = ({ page, setPage, setIsAdded, isAdded }) => {
     setPage(1);
   }
 
+  const searchRef = useRef();
+
   const handleSearch = (e) => {
     setSearch(e.target.value)
-    tableRef.current?.scrollIntoView({ behavior: 'smooth' })
+    searchRef.current?.scrollIntoView({ behavior: 'smooth' })
     setPage(1);
   }
 
@@ -245,6 +247,7 @@ handleAddingItem()
         {searchActive &&
           <>
             <input
+              ref={searchRef}
               type="text"
               placeholder="Search transactions"
               className="searchbar"
