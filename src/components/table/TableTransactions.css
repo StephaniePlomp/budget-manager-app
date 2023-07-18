@@ -37,7 +37,8 @@
     overflow: hidden;
     border: 2px solid var(--purple);
     background: #ffffff62;
-    height: 310px;
+    min-height: 311px;
+    height: fit-content;
 }
 
 table {
