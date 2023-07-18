@@ -37,6 +37,7 @@
     overflow: hidden;
     border: 2px solid var(--purple);
     background: #ffffff62;
+    height: 310px;
 }
 
 table {
@@ -74,6 +75,7 @@ th:nth-child(4) {
 th:nth-child(5) {
     width: 40px;
     cursor: pointer;
+    text-align: center;
 }
 
 th:nth-child(5) .search-button:hover {

@@ -72,7 +72,7 @@ const TableTransactions = ({ page, setPage, setIsAdded, isAdded }) => {
     if (isDesktop) {
       setHeightEmptyRows(34)
     } else if (isMobile) {
-      setHeightEmptyRows(60)
+      setHeightEmptyRows(58)
     }
   }, [isDesktop, isMobile])
 
@@ -94,6 +94,7 @@ const TableTransactions = ({ page, setPage, setIsAdded, isAdded }) => {
 
   const handleSearch = (e) => {
     setSearch(e.target.value)
+    tableRef.current?.scrollIntoView({ behavior: 'smooth' })
     setPage(1);
   }
 
@@ -108,7 +109,6 @@ const TableTransactions = ({ page, setPage, setIsAdded, isAdded }) => {
       const filterTransactions = transactions.filter((transaction) =>
         search.toLocaleLowerCase() === '' ? transaction : transaction.title.toLocaleLowerCase().includes(search.toLocaleLowerCase()))
       const sortTransactions = filterTransactions.sort((a, b) => new Date(b.date.replace(/-/g, "/")) - new Date(a.date.replace(/-/g, "/")))
-      console.log(search)
       return sortTransactions;
     } else if (periodIndex === 1) {
       const filterTodaysTransactions = todaysTransactions.filter((transaction) =>
@@ -173,7 +173,7 @@ const TableTransactions = ({ page, setPage, setIsAdded, isAdded }) => {
 
 
   // showing no transactions text when there aren't transactions
-  const [noTransactions, setNotTransactions] = useState("")
+  const [noTransactions, setNoTransactions] = useState("")
 
   const handleNoTransactions = useCallback(() => {
     if (transactionPeriod.length === 0 && periodIndex === 0 && search.length === 0) {
@@ -196,7 +196,7 @@ const TableTransactions = ({ page, setPage, setIsAdded, isAdded }) => {
   }, [periodIndex, search.length, transactionPeriod.length])
 
   useEffect(() => {
-    setNotTransactions(handleNoTransactions())
+    setNoTransactions(handleNoTransactions())
   }, [handleNoTransactions])
   
 
