@@ -28,8 +28,6 @@ const Income = ({ isAdded, setIsAdded }) => {
         setAmount(val);
     }
 
-    const onDateFocus = (e) => (e.target.type = "date");
-    const onBlurFocus = (e) => {if(e.target.value === '') {e.target.type = 'text'}}
     const onDateChange = e => setDate(e.target.value)
     const formatDate = moment(moment((date), 'YYYY-MM-DD')).format('MM-DD-YYYY');
 
@@ -123,16 +121,13 @@ const Income = ({ isAdded, setIsAdded }) => {
                     />
                     <TextField
                         className='textfield'
-                        label="Date of Expense"
-                        type='text'
-                        id='date'
+                        type='date'
                         value={date}
                         onChange={onDateChange}
                         required
                         error={dateError}
                         helperText={dateError && "Please select the date"}
-                        onFocus={onDateFocus}
-                        onBlur={onBlurFocus}
+                        placeholder="mm/dd/yyyy"
                     />
                     <Typography align='center'>
                         <button className='add-btn'>Submit</button>
