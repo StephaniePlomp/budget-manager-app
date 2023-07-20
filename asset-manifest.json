@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/budget-manager-app/static/css/main.642e3e5a.css",
+    "main.css": "/budget-manager-app/static/css/main.ca67af55.css",
     "main.js": "/budget-manager-app/static/js/main.d7ddf09b.js",
     "static/media/piggybank.png": "/budget-manager-app/static/media/piggybank.cbf326bb2d9007b4a6b4.png",
     "index.html": "/budget-manager-app/index.html",
-    "main.642e3e5a.css.map": "/budget-manager-app/static/css/main.642e3e5a.css.map",
+    "main.ca67af55.css.map": "/budget-manager-app/static/css/main.ca67af55.css.map",
     "main.d7ddf09b.js.map": "/budget-manager-app/static/js/main.d7ddf09b.js.map"
   },
   "entrypoints": [
-    "static/css/main.642e3e5a.css",
+    "static/css/main.ca67af55.css",
     "static/js/main.d7ddf09b.js"
   ]
 }
