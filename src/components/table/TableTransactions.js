@@ -72,7 +72,7 @@ const TableTransactions = ({ page, setPage, setIsAdded, isAdded }) => {
     if (isDesktop) {
       setHeightEmptyRows(34)
     } else if (isMobile) {
-      setHeightEmptyRows(58)
+      setHeightEmptyRows(66)
     }
   }, [isDesktop, isMobile])
 

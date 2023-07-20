@@ -42,6 +42,8 @@ const Expense = ({ setIsAdded }) => {
         setAmount(val);
     }
 
+    const onDateFocus = (e) => (e.target.type = "date");
+    const onBlurFocus = (e) => {if(e.target.value === '') {e.target.type = 'text'}}
     const onDateChange = e => setDate(e.target.value)
     const formatDate = moment(moment((date), 'YYYY-MM-DD')).format('MM-DD-YYYY');
 
@@ -49,6 +51,7 @@ const Expense = ({ setIsAdded }) => {
     const [amountError, setAmountError] = useState(false);
     const [dateError, setDateError] = useState(false);
     const [categoryError, setCategoryError] = useState(false);
+
 
     const onSaveExpenseClick = (e) => {
         e.preventDefault()
@@ -138,12 +141,16 @@ const Expense = ({ setIsAdded }) => {
 
                     <TextField
                         className='textfield'
-                        type='date'
+                        label="Date of Expense"
+                        type='text'
+                        id='date'
                         value={date}
                         onChange={onDateChange}
                         required
                         error={dateError}
                         helperText={dateError && "Please select the date"}
+                        onFocus={onDateFocus}
+                        onBlur={onBlurFocus}
                     />
 
                     <TextField
