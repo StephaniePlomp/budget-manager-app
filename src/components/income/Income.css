@@ -51,4 +51,9 @@
     font-size: 22px;
     margin: 1rem auto;
   }
+
+  input [type= ‘date’ ]  ::after{
+    color: #fff;
+    content: attr(placeholder);
+ } 
   
