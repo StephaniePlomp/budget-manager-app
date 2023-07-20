@@ -151,6 +151,7 @@ const Expense = ({ setIsAdded }) => {
                         helperText={dateError && "Please select the date"}
                         onFocus={onDateFocus}
                         onBlur={onBlurFocus}
+                        placeholder="mm/dd/yyyy"
                     />
 
                     <TextField
