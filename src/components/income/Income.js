@@ -120,7 +120,9 @@ const Income = ({ isAdded, setIsAdded }) => {
                         helperText={amountError && "Please fill in the amount"}
                     />
                     <TextField
+                        InputLabelProps={{ shrink: true }}
                         className='textfield'
+                        label="Date of Expense"
                         type='date'
                         value={date}
                         onChange={onDateChange}
