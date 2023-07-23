@@ -127,7 +127,6 @@ const Income = ({ isAdded, setIsAdded }) => {
                         required
                         error={dateError}
                         helperText={dateError && "Please select the date"}
-                        placeholder="mm/dd/yyyy"
                     />
                     <Typography align='center'>
                         <button className='add-btn'>Submit</button>

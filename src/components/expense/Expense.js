@@ -140,17 +140,16 @@ const Expense = ({ setIsAdded }) => {
                     />
 
                     <TextField
+                        InputLabelProps={{ shrink: true }}
                         className='textfield'
                         label="Date of Expense"
-                        type='text'
+                        type='date'
                         id='date'
-                        value={date}
+                        value={date ? date : ''}
                         onChange={onDateChange}
                         required
                         error={dateError}
                         helperText={dateError && "Please select the date"}
-                        onFocus={onDateFocus}
-                        onBlur={onBlurFocus}
                     />
 
                     <TextField
