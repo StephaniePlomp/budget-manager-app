@@ -52,25 +52,6 @@
     margin: 1rem auto;
   }
 
-  /* input[type="date"] {
-    position: relative;
-  }
-  
-  input[type="date"]:before {
-    position: absolute;
-    left: 10px;
-    top: 0px;
-    content: "Date of transaction*";
-    color: #636262;
-    width: 100%;
-    line-height:20px;
-  }
-
-  input[type="date"]:valid:before {
-    display: none;
-  }
-
-  input[type="date"]:focus::before,
-input[type="date"]:valid::before {
-  content: "";
-} */
+  input::-webkit-date-and-time-value {
+    text-align: left;
+}

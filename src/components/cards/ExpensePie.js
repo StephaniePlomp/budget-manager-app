@@ -36,8 +36,10 @@ const ExpensePie = ({ dataChange, colorChange, handleNoData, CustomTooltip, pieS
                 />
                 {colorChange?.map((entry, index) => (
                     <Cell
+                        style={{outline: 'none'}}
                         key={index}
-                        fill={colorChange[index % colorChange.length]}
+                        fill={colorChange[index % colorChange.length]
+                        }
                     />
                 ))
                 }

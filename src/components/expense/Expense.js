@@ -42,8 +42,6 @@ const Expense = ({ setIsAdded }) => {
         setAmount(val);
     }
 
-    const onDateFocus = (e) => (e.target.type = "date");
-    const onBlurFocus = (e) => {if(e.target.value === '') {e.target.type = 'text'}}
     const onDateChange = e => setDate(e.target.value)
     const formatDate = moment(moment((date), 'YYYY-MM-DD')).format('MM-DD-YYYY');
 
