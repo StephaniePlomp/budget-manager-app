@@ -1,70 +1,110 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Budget Manager App
 
-## Available Scripts
+A Budget Manager App built with with React.js and Redux Toolkit. Redux Toolkit is used to efficiently manage the application's state, ensuring a single source of truth for the financial data. This enables smooth data flow and real-time updates across the app. Recharts is used for creating interactive charts to visualize the financial data. The financial data is organized in rows and columns with Material UI Pagination. The app also utilizes LocalStorage, a web API that allows data to be stored locally on the user's device
+Check the [live preview](http://stephanieplomp.github.io).
 
-In the project directory, you can run:
+# Live demo
 
-### `npm start`
+http://stephanieplomp.github.io/budget-manager-app
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Screenshot
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![App Screenshot](https://stephanieplomp.github.io/static/media/budgetManager.223856d050002f8f1ff2.png)
 
-### `npm test`
+## Built with
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This project was built using these technologies.
 
-### `npm run build`
+- React.js
+- CSS3
+- VsCode
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Features
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **State Management with Redux Toolkit:** Redux Toolkit efficiently manages the application's state, ensuring a single source of truth for all financial data. This enables smooth data flow and real-time updates across the app.
+- - **Data Table:** Financial data is displayed in a tabular format. The data table offers a search function for quick access to specific information.
+- **Pagination:** The app divides tabular format data into manageable pages with pagination, reducing clutter and improving overall performance.
+- **Data Visualization:** A clear overview of the financial data through an interactive chart. Visual representations of the income, expenses, and budget progress will give valuable insights.
+- **Responsive Design:** The application is built with responsiveness in mind, ensuring that it's accessible and managable on various devices, including desktops, tablets, and smartphones.
+- **framer-motion:** The app incorporates framer-motion to add engaging and smooth animations to different elements, enhancing the overall user experience.
+- **Local storage:**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🛠️ Technology Stack 
 
-### `npm run eject`
+Dependencies defined in package.json:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- React.js: A popular JavaScript library for building user interfaces, providing a component-based architecture and a virtual DOM for efficient rendering.
+- Redux Toolkit: A set of utility functions to simplify Redux development, including a powerful state management solution.
+- Chart.js: A versatile library for creating interactive charts and graphs to visualize financial data.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Usage
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **Adding Transactions:** Use the expense or income component to add your expense or income. Add the name, specify the amount, select the date and select the category.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **Removing Transactions:** Navigate to the table component to delete transactions with the trash button. 
 
-## Learn More
+- **Data Table and Pagination:** Utilize the DataTable component with built-in pagination to view and manage your financial data efficiently.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **Data Visualization:** Gain insights into your spending patterns and budget progress by viewing the interactive income/expense chart on the main dashboard.
+  
+- **Demo and Reset:**: Use the demo version to get a overview of the app with data. Remove all transactions with the reset button.
+  
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Getting started
 
-### Code Splitting
+## Prerequisites 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+You should have [Node.js](https://nodejs.org/en/) and [Git](https://git-scm.com/) installed on your PC. You should also own a GitHub account.
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Setup And Deployment 🔧
 
-### Making a Progressive Web App
+1. To Get Started, Fork this repository to your GitHub account:
+2. Clone the forked repo from your account using:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+   ```bash
+     git clone https://github.com/<your-username>/home.git
+   ```
 
-### Advanced Configuration
+3. Open the project folder and Navigate to /src/components/. You will find all the components used and you can edit your information accordingly.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+4. Change URL in [package.json](./package.json) file:
 
-### Deployment
+   ```json
+    "homepage": "https://<your-username>.github.io/home"
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+   Or for deployment at custom domain, refer [create-react-app.dev](https://create-react-app.dev/docs/deployment/#step-1-add-homepage-to-packagejson)
 
-### `npm run build` fails to minify
+5. After editing run the following bash commands:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+   ```bash
+   npm install
+   npm start
+   ```
+
+6. To deploy website, run:
+
+   ```bash
+    npm run build
+    npm run deploy
+   ```
+
+   Or for deployment at \<username>.github.io, refer [READMEdocs/custom-deployment.md](./READMEdocs/custom-deployment.md) and [pages.js](./pages.js)
+
+7. Congrats your site is up and running. To see it live, visit:
+
+   ```https
+     https://<your-username>.github.io/home
+   ```
+
+# Contributing
+
+### How To Contribute 
+
+If you can help me.
+Please don't hesitate to open an pull request.
+
+### Thank you
+If you liked this Budget Manager App, don't forget to give it a ⭐.
