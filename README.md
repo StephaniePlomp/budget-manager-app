@@ -4,6 +4,7 @@
 A Budget Manager App built with with React.js and Redux Toolkit. Redux Toolkit is used to efficiently manage the application's state, ensuring a single source of truth for the financial data. This enables smooth data flow and real-time updates across the app. Recharts is used for creating interactive charts to visualize the financial data. The financial data is organized in rows and columns with Material UI Pagination. The app also utilizes LocalStorage, a web API that allows data to be stored locally on the user's device
 
 
+
 # Live demo
 
 http://stephanieplomp.github.io/budget-manager-app
@@ -37,7 +38,7 @@ This project was built using these technologies.
 Dependencies defined in package.json:
 
 - React.js: A popular JavaScript library for building user interfaces, providing a component-based architecture and a virtual DOM for efficient rendering.
-- Redux
+- Redux: An open-source JavaScript library for managing and centralizing application state.
 - Redux Toolkit: A set of utility functions to simplify Redux development, including a powerful state management solution.
 - Chart.js: A versatile library for creating interactive charts and graphs to visualize financial data.
 
@@ -51,8 +52,9 @@ Dependencies defined in package.json:
 
 - **Data Visualization:** Gain insights into your spending patterns and budget progress by viewing the interactive income/expense chart on the main dashboard.
   
-- **Demo and Reset:**: Use the demo version to get a overview of the app with data. Remove all transactions with the reset button.
+- **Demo and Reset:** Use the demo version to get a overview of the app with data. Remove all transactions with the reset button.
   
+
 
 # Getting started
 
@@ -101,6 +103,8 @@ You should have [Node.js](https://nodejs.org/en/) and [Git](https://git-scm.com/
    ```https
      https://<your-username>.github.io/home
    ```
+
+
 
 # Contributing
 
